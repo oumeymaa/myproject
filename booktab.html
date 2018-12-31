@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon restaurant</title>
+  
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/datePicker.css">
+</head>
+
+<body>
+        <section id="contact" class="section-padding">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <h1 class="header-h">commandez votre table</h1>
+                      
+                        <p> Ce formulaire permet de commander une table dans notre restaurant, ensuite vous pouvez commande vos plats. Il
+                          faudra aussi indiquer vos coordonn&eacute;es et dans le cas de plusieurs personne, indiquer le nom de chacun
+                          d'entre eux. </p>
+                    </div>
+                  </div>
+                  <form id="form1" name="form1" method="post" action="">
+                  <div class="row msg-row">
+                    <div class="col-md-4 col-sm-4 mr-15">
+                      <div class="media-2">
+                        <div class="media-left">
+                          <div class="contact-phone bg-1 text-center"><span class="fas fa-chair"></span></div>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="dark-blue regular">table pour combien de personnes? </h4>
+                          <form id="form1" name="form1" method="post" action="">
+                            Table pour combien de personnes ?
+                            <select name="nbp" id="nbp">
+                              <option value="-1">--Veuillez choisir---</option>
+                              <option value="1">Une place</option>
+                              <option value="2">Deux places</option>
+                              <option value="4">4 places</option>
+                              <option value="6">6 places</option>
+                            </select>
+                            <br />
+                            <div id="chaises"></div>
+                            <br />
+                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                         
+                        </div>
+                      </div>
+                      <div class="media-2">
+                        <div class="media-left">
+                          <div class="contact-email bg-14 text-center"><span class="hour-icon fa fa-clock-o"></span></div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="dark-blue regular"> A quelle date vous allez venir ?</h4>
+                            
+                            <input name="date" type="text" id="date" />
+                            <br />
+                        </div>
+                      </div>
+                    </div>
+                    <!---->
+                      <div class="col-md-8 col-sm-8">
+                      
+                        <!---->
+                        <h4 class="dark-blue regular"> Vos coordonées </h4>
+                        
+                        <div class="col-md-6 col-sm-6 contact-form pad-form">
+                          <div class="form-group label-floating is-empty">
+                            
+                            <input type="text" name="name" class="form-control" id="nom" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                          </div>
+            
+                        </div> 
+                        
+                        <div class="col-md-6 col-sm-6 contact-form">
+                            <div class="form-group label-floating is-empty">
+                              <h6 class="dark-blue regular"> Civilité : </h6>
+                              <input name="civilite" type="radio" value="mme" />
+                              Madamme
+                              <input name="civilite" type="radio" value="mlle" />
+                              Mademoiselle
+                              <input name="civilite" type="radio" value="m" />
+                              Monsieur
+                             
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 contact-form pad-form">
+                          <div class="form-group">
+                            <input type="email" class="form-control label-floating is-empty" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-6 contact-form">
+                          <div class="form-group">
+                            <input type="text" class="form-control label-floating is-empty" name="tel" id="tel" placeholder="Phone" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-12 contact-form">
+                          <div class="form-group label-floating is-empty">
+                              <div id="div_accompagnateurs">Liste des accompagnateurs (une personne par ligne):
+                                  <br />
+                                  <textarea name="accompagnateurs" cols="60" rows="4" id="accompagnateurs"></textarea>
+                                  <br />
+                                </div>
+                          </div>
+                          <div class="col-md-12 contact-form">
+                          <div> 
+                                  
+                              
+                              <h4><strong> Que voulez-vous manger?</strong></h4>
+                                <label> 
+                                    <input name="cmd" type="checkbox" value="Gateaux" data-prix="5" />
+                                    Salade</label>
+                                <label> 
+                                  <input name="cmd" type="checkbox" value="Soupe" data-prix="2.5" />
+                                  Soupe </label>
+                               
+                                <label>
+                                  <input name="cmd" type="checkbox" value="Couscous" data-prix="15.5" />
+                                  Couscous</label>
+                                
+                                <label>
+                                  <input name="cmd" type="checkbox" value="Riz" data-prix="12" />
+                                  Riz</label>
+                                
+                                <label>
+                                  <input name="cmd" type="checkbox" value="Fruits" data-prix="7" />
+                                  Fruits </label>
+                                <label> 
+                                  <input name="cmd" type="checkbox" value="Gateaux" data-prix="6.4" />
+                                  Gateaux</label>
+                                
+                                    </div>
+                              </div>
+            
+            
+            
+                  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                     
+                        </div>
+                        <div class="col-md-12 btnpad">
+                          <div class="contacts-btn-pad">
+                            <button class="contacts-btn" id="b1">Book a table</button>
+                          </div>
+                        </div>
+                        <div id="div_resume">
+                            Afficher le résumé ici ...
+                          </div>
+                          <p>&nbsp;</p>
+                        </form>
+                      
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section> 
+              <footer class="footer text-center">
+                    <div class="footer-top">
+                      <div class="row">
+                        <div class="col-md-offset-3 col-md-6 text-center">
+                          <div class="widget">
+                            <h4 class="widget-title">Oumey's</h4>
+                            <address>Gafsa centre ville <br>Gafsa , tunisie 110013</address>
+                            <div class="social-list">
+                              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </div>
+                            <p class="copyright clear-float">
+                              © Hamhoum Oumeyma. All Rights Reserved
+                              <div class="credits">
+                               
+                                Designed by <a href="https://www.facebook.com/ouuu.meymaa">Hamhoum Oumeyma</a>
+                              </div>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                 
+                
+                  <script src="js/jquery.min.js"></script>
+                  <script src="js/jquery.easing.min.js"></script>
+                  <script src="js/bootstrap.min.js"></script>
+                  
+                  <script src="js/custom.js"></script>
+                  <script src="js/datePicker.js"></script>
+                  <script src="js/util.js"></script>
+                </body>
+                
+                </html>
